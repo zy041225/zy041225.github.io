@@ -5,18 +5,19 @@
   
 
   
-  <title>zy041225&#39;s personal blog</title>
+  <title>FileHandle variable | zy041225&#39;s personal blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="FileHandle variableUsing array123456789101112#!/usr/bin/perl -wuse strict;my @fhs;for(1..5)&amp;#123;	open $fh, $_ or die $!; #open files	push @fhs, $fh;&amp;#125;foreach my $fh (@fhs)&amp;#123;	my $text = readli">
+  <meta name="description" content="Using array123456789101112#!/usr/bin/perl -wuse strict;my @fhs;for(1..5)&amp;#123;	open $fh, $_ or die $!; #open files	push @fhs, $fh;&amp;#125;foreach my $fh (@fhs)&amp;#123;	my $text = readline($fh); #read cont">
+<meta name="keywords" content="programming&#x2F;perl">
 <meta property="og:type" content="article">
-<meta property="og:title" content="zy041225&#39;s personal blog">
+<meta property="og:title" content="FileHandle variable">
 <meta property="og:url" content="http://yoursite.com/2018/03/14/FileHanle_variable/index.html">
 <meta property="og:site_name" content="zy041225&#39;s personal blog">
-<meta property="og:description" content="FileHandle variableUsing array123456789101112#!/usr/bin/perl -wuse strict;my @fhs;for(1..5)&amp;#123;	open $fh, $_ or die $!; #open files	push @fhs, $fh;&amp;#125;foreach my $fh (@fhs)&amp;#123;	my $text = readli">
-<meta property="og:updated_time" content="2018-03-14T15:03:55.284Z">
+<meta property="og:description" content="Using array123456789101112#!/usr/bin/perl -wuse strict;my @fhs;for(1..5)&amp;#123;	open $fh, $_ or die $!; #open files	push @fhs, $fh;&amp;#125;foreach my $fh (@fhs)&amp;#123;	my $text = readline($fh); #read cont">
+<meta property="og:updated_time" content="2018-03-14T15:29:54.972Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="zy041225&#39;s personal blog">
-<meta name="twitter:description" content="FileHandle variableUsing array123456789101112#!/usr/bin/perl -wuse strict;my @fhs;for(1..5)&amp;#123;	open $fh, $_ or die $!; #open files	push @fhs, $fh;&amp;#125;foreach my $fh (@fhs)&amp;#123;	my $text = readli">
+<meta name="twitter:title" content="FileHandle variable">
+<meta name="twitter:description" content="Using array123456789101112#!/usr/bin/perl -wuse strict;my @fhs;for(1..5)&amp;#123;	open $fh, $_ or die $!; #open files	push @fhs, $fh;&amp;#125;foreach my $fh (@fhs)&amp;#123;	my $text = readline($fh); #read cont">
   
     <link rel="alternate" href="/atom.xml" title="zy041225&#39;s personal blog" type="application/atom+xml">
   
@@ -66,16 +67,26 @@
         <section id="main"><article id="post-FileHanle_variable" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/03/14/FileHanle_variable/" class="article-date">
-  <time datetime="2018-03-14T15:03:55.284Z" itemprop="datePublished">2018-03-14</time>
+  <time datetime="2018-03-14T15:29:54.971Z" itemprop="datePublished">2018-03-14</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      FileHandle variable
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="FileHandle-variable"><a href="#FileHandle-variable" class="headerlink" title="FileHandle variable"></a>FileHandle variable</h1><h2 id="Using-array"><a href="#Using-array" class="headerlink" title="Using array"></a>Using array</h2><figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/perl -w</span></span><br><span class="line"><span class="keyword">use</span> strict;</span><br><span class="line"></span><br><span class="line"><span class="keyword">my</span> @fhs;</span><br><span class="line"><span class="keyword">for</span>(<span class="number">1</span>..<span class="number">5</span>)&#123;</span><br><span class="line">	<span class="keyword">open</span> $fh, $_ <span class="keyword">or</span> <span class="keyword">die</span> $!; <span class="comment">#open files</span></span><br><span class="line">	<span class="keyword">push</span> @fhs, $fh;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">foreach</span> <span class="keyword">my</span> $fh (@fhs)&#123;</span><br><span class="line">	<span class="keyword">my</span> $text = <span class="keyword">readline</span>($fh); <span class="comment">#read context</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h2 id="Using-array"><a href="#Using-array" class="headerlink" title="Using array"></a>Using array</h2><figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/perl -w</span></span><br><span class="line"><span class="keyword">use</span> strict;</span><br><span class="line"></span><br><span class="line"><span class="keyword">my</span> @fhs;</span><br><span class="line"><span class="keyword">for</span>(<span class="number">1</span>..<span class="number">5</span>)&#123;</span><br><span class="line">	<span class="keyword">open</span> $fh, $_ <span class="keyword">or</span> <span class="keyword">die</span> $!; <span class="comment">#open files</span></span><br><span class="line">	<span class="keyword">push</span> @fhs, $fh;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">foreach</span> <span class="keyword">my</span> $fh (@fhs)&#123;</span><br><span class="line">	<span class="keyword">my</span> $text = <span class="keyword">readline</span>($fh); <span class="comment">#read context</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>reference:<br><a href="http://stackoverflow.com/questions/2023001/how-can-i-read-from-a-perl-filehandle-that-is-an-array-element" target="_blank" rel="noopener">http://stackoverflow.com/questions/2023001/how-can-i-read-from-a-perl-filehandle-that-is-an-array-element</a></p>
 <h2 id="Using-module-“FileHandle”"><a href="#Using-module-“FileHandle”" class="headerlink" title="Using module “FileHandle”"></a>Using module “FileHandle”</h2><figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/perl -w</span></span><br><span class="line"><span class="keyword">use</span> FileHandle;</span><br><span class="line"></span><br><span class="line"><span class="keyword">my</span> %fh;</span><br><span class="line"><span class="keyword">for</span>(<span class="number">1</span>..<span class="number">5</span>)&#123;</span><br><span class="line">	<span class="keyword">open</span>($fh&#123;$_&#125;, <span class="string">"&gt; $_.txt"</span>) <span class="keyword">or</span> <span class="keyword">die</span> $!;</span><br><span class="line">	$fh&#123;$_&#125; -&gt;<span class="keyword">print</span>(<span class="string">"$_\n"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>reference:</p>
@@ -83,19 +94,29 @@
 <li><a href="http://www.cnblogs.com/ace9/archive/2011/06/14/2080808.html" target="_blank" rel="noopener">http://www.cnblogs.com/ace9/archive/2011/06/14/2080808.html</a></li>
 <li><a href="http://www.cnblogs.com/ace9/archive/2011/06/14/2080808.html" target="_blank" rel="noopener">http://perldoc.perl.org/FileHandle.html</a></li>
 </ol>
-<p>#programming/perl</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/14/FileHanle_variable/" data-id="cjer88bih0002hzfyquy7jhuh" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/03/14/FileHanle_variable/" data-id="cjer8dsv80001ldfyxrhqsjc1" class="article-share-link">Teilen</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/programming-perl/">programming/perl</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
+  
+    <a href="/2018/03/14/Centrosome_repeat_may_affect_offsprint_chance/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Neuer</strong>
+      <div class="article-nav-title">
+        
+          Centrosomes repeat may affect offspring chance
+        
+      </div>
+    </a>
   
   
     <a href="/2018/03/14/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
@@ -116,15 +137,29 @@
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/biology/">biology</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/programming-perl/">programming/perl</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/biology/" style="font-size: 10px;">biology</a> <a href="/tags/programming-perl/" style="font-size: 10px;">programming/perl</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
     <h3 class="widget-title">Archiv</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li></ul>
     </div>
   </div>
 
@@ -137,15 +172,15 @@
       <ul>
         
           <li>
-            <a href="/2018/03/14/FileHanle_variable/">(no title)</a>
+            <a href="/2018/03/14/Centrosome_repeat_may_affect_offsprint_chance/">Centrosomes repeat may affect offspring chance</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/14/FileHanle_variable/">FileHandle variable</a>
           </li>
         
           <li>
             <a href="/2018/03/14/hello-world/">Hello World</a>
-          </li>
-        
-          <li>
-            <a href="/2017/11/09/Centrosome_repeat_may_affect_offsprint_chance/">(no title)</a>
           </li>
         
       </ul>
