@@ -306,6 +306,137 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/10/FileHanle_variable/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zy041225">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zy041225's personal blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/10/FileHanle_variable/" itemprop="url">FileHandle variable</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-10T19:25:35+08:00">2018-04-10</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Using-array"><a href="#Using-array" class="headerlink" title="Using array"></a>Using array</h2><blockquote>
+<p><a href="http://stackoverflow.com/questions/2023001/how-can-i-read-from-a-perl-filehandle-that-is-an-array-element" target="_blank" rel="noopener">http://stackoverflow.com/questions/2023001/how-can-i-read-from-a-perl-filehandle-that-is-an-array-element</a></p>
+</blockquote>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/perl -w</span></span><br><span class="line"><span class="keyword">use</span> strict;</span><br><span class="line"></span><br><span class="line"><span class="keyword">my</span> @fhs;</span><br><span class="line"><span class="keyword">for</span>(<span class="number">1</span>..<span class="number">5</span>)&#123;</span><br><span class="line">	<span class="keyword">open</span> $fh, $_ <span class="keyword">or</span> <span class="keyword">die</span> $!; <span class="comment">#open files</span></span><br><span class="line">	<span class="keyword">push</span> @fhs, $fh;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">foreach</span> <span class="keyword">my</span> $fh (@fhs)&#123;</span><br><span class="line">	<span class="keyword">my</span> $text = <span class="keyword">readline</span>($fh); <span class="comment">#read context</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Using-module-“FileHandle”"><a href="#Using-module-“FileHandle”" class="headerlink" title="Using module “FileHandle”"></a>Using module “FileHandle”</h2><blockquote>
+<p><a href="http://www.cnblogs.com/ace9/archive/2011/06/14/2080808.html" target="_blank" rel="noopener">http://www.cnblogs.com/ace9/archive/2011/06/14/2080808.html</a><br><a href="http://www.cnblogs.com/ace9/archive/2011/06/14/2080808.html" target="_blank" rel="noopener">http://www.cnblogs.com/ace9/archive/2011/06/14/2080808.html</a></p>
+</blockquote>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/perl -w</span></span><br><span class="line"><span class="keyword">use</span> FileHandle;</span><br><span class="line"></span><br><span class="line"><span class="keyword">my</span> %fh;</span><br><span class="line"><span class="keyword">for</span>(<span class="number">1</span>..<span class="number">5</span>)&#123;</span><br><span class="line">	<span class="keyword">open</span>($fh&#123;$_&#125;, <span class="string">"&gt; $_.txt"</span>) <span class="keyword">or</span> <span class="keyword">die</span> $!;</span><br><span class="line">	$fh&#123;$_&#125; -&gt;<span class="keyword">print</span>(<span class="string">"$_\n"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/01/RNA_integrity/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -396,137 +527,6 @@
 <li>Peaks of 28S and 18S</li>
 <li>Flat in fast region (indicate no degradation of RNA into fragmented RNA)</li>
 </ul>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/01/FileHanle_variable/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="zy041225">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zy041225's personal blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/01/FileHanle_variable/" itemprop="url">FileHandle variable</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-01T18:24:03+08:00">2018-04-01</time>
-            
-
-            
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Using-array"><a href="#Using-array" class="headerlink" title="Using array"></a>Using array</h2><figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/perl -w</span></span><br><span class="line"><span class="keyword">use</span> strict;</span><br><span class="line"></span><br><span class="line"><span class="keyword">my</span> @fhs;</span><br><span class="line"><span class="keyword">for</span>(<span class="number">1</span>..<span class="number">5</span>)&#123;</span><br><span class="line">	<span class="keyword">open</span> $fh, $_ <span class="keyword">or</span> <span class="keyword">die</span> $!; <span class="comment">#open files</span></span><br><span class="line">	<span class="keyword">push</span> @fhs, $fh;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">foreach</span> <span class="keyword">my</span> $fh (@fhs)&#123;</span><br><span class="line">	<span class="keyword">my</span> $text = <span class="keyword">readline</span>($fh); <span class="comment">#read context</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>reference:<br><a href="http://stackoverflow.com/questions/2023001/how-can-i-read-from-a-perl-filehandle-that-is-an-array-element" target="_blank" rel="noopener">http://stackoverflow.com/questions/2023001/how-can-i-read-from-a-perl-filehandle-that-is-an-array-element</a></p>
-<h2 id="Using-module-“FileHandle”"><a href="#Using-module-“FileHandle”" class="headerlink" title="Using module “FileHandle”"></a>Using module “FileHandle”</h2><figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/perl -w</span></span><br><span class="line"><span class="keyword">use</span> FileHandle;</span><br><span class="line"></span><br><span class="line"><span class="keyword">my</span> %fh;</span><br><span class="line"><span class="keyword">for</span>(<span class="number">1</span>..<span class="number">5</span>)&#123;</span><br><span class="line">	<span class="keyword">open</span>($fh&#123;$_&#125;, <span class="string">"&gt; $_.txt"</span>) <span class="keyword">or</span> <span class="keyword">die</span> $!;</span><br><span class="line">	$fh&#123;$_&#125; -&gt;<span class="keyword">print</span>(<span class="string">"$_\n"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>reference:</p>
-<ol>
-<li><a href="http://www.cnblogs.com/ace9/archive/2011/06/14/2080808.html" target="_blank" rel="noopener">http://www.cnblogs.com/ace9/archive/2011/06/14/2080808.html</a></li>
-<li><a href="http://www.cnblogs.com/ace9/archive/2011/06/14/2080808.html" target="_blank" rel="noopener">http://perldoc.perl.org/FileHandle.html</a></li>
-</ol>
 
           
         
